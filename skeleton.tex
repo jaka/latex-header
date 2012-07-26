@@ -1,0 +1,79 @@
+\documentclass[a4paper,12pt]{article}
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage{amsmath,amssymb,amsthm}
+\usepackage{dsfont,fouriernc}
+\usepackage[slovene]{babel}
+\usepackage[a4paper,top=1in,left=0.7in,
+right=0.7in,bottom=1.2in]{geometry}
+\usepackage{graphicx}
+\usepackage{MnSymbol}
+\usepackage{fancyhdr}
+\usepackage{fixltx2e}
+%\usepackage{parskip}
+\usepackage[pdftex,unicode=true,colorlinks=true,
+pdfproducer={LaTeX},pdfcreator={pdflatex}]{hyperref}
+
+\makeatletter
+\newcommand{\@keywords}{}
+\newcommand{\@producer}{}
+\newcommand{\@subject}{}
+\newcommand{\keywords}[1]{\renewcommand{\@keywords}{#1}}
+\newcommand{\producer}[1]{\renewcommand{\@producer}{#1}}
+\newcommand{\subject}[1]{\renewcommand{\@subject}{#1}}
+\AtBeginDocument{\hypersetup{
+pdfauthor = {\@author},
+pdfkeywords={\@keywords},
+pdfproducer={\@producer},
+pdfsubject={\@subject},
+pdftitle = {\@title}
+}}
+\makeatother
+
+%\setlength{\parindent}{0pt}
+%\setlength{\parskip}{12pt}
+\setlength{\headsep}{25pt}
+\setlength{\footskip}{30pt}
+
+\input{latex/commands.tex}
+
+%\pagestyle{empty}
+\pagestyle{fancy}
+
+\fancyhf{}
+\makeatletter
+\chead{\small\textsc{\@title}}
+\makeatother
+\cfoot{\small\thepage}
+\renewcommand{\headrulewidth}{0.5pt}
+\renewcommand{\footrulewidth}{0.5pt}
+
+% ===
+
+\title{Title}
+\author{Author}
+\date{\today}
+\keywords{Keywords}
+\subject{Sample}
+\producer{Latex}
+
+% ===
+
+\begin{document}
+
+\thispagestyle{empty}
+\begin{center}
+\makeatletter
+\textsc{\LARGE \@author}\\[1cm]
+{\huge \@title}\\[0.4cm]
+{\large \@date}
+\makeatother
+\end{center}
+
+\input{sample.tex}
+
+\pagebreak
+
+Bla bla \(\ldots\)
+
+\end{document}

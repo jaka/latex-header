@@ -1,0 +1,19 @@
+\begin{align*}
+y_1 &= \underbrace{\int \left[2u_2 - 3y_1 + \underbrace{\int \left[u_1 + 2u_2 - 2y_2\right] \mathrm{d}\tau}_{x_2} \right]\ \mathrm{d}t}_{x_1}, \\
+y_2 &= u_2 + \underbrace{\int \left[3u_2 + 2u_1 - 4y_1 \underbrace{- \int 3y_2\ \mathrm{d}\tau}_{x_4} \right]\ \mathrm{d}t}_{x_3}.
+\end{align*}
+
+\[\left[\begin{array}{cccc}
+ 0 & 1 & 0 & 0\\
+ 0 & 0 & 0 & 0\\
+ 0 & 0 & -\frac{\sqrt{-k (m_1+m_2)}}{\sqrt{m_1} \sqrt{m_2}} & 0\\
+ 0 & 0 & 0 & \frac{\sqrt{-k (m_1+m_2)}}{\sqrt{\text{m1}} \sqrt{m_2}}\\
+\end{array}\right]\]
+
+\begin{equation}
+\begin{aligned}
+0 &= [A_k^\top \Delta_k + \Delta_k A_k] + R(X_k) = \\
+&= [(A - SX_k)^\top (X_{k+1} - X_k) + (X_{k+1} - X_k)(A - SX_k)] + [X_kA + A^\top X_k + Q - X_kSX_k] = \\
+&= (A - SX_k)^\top X_{k+1} + X_{k+1}(A - SX_k) + Q + X_k^\top S^\top X_k.
+\end{aligned} \label{xk}
+\end{equation}

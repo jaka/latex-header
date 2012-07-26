@@ -1,0 +1,47 @@
+\newtheorem{izrek}{Izrek}[section]
+\newtheorem{lema}[izrek]{Lema}
+\newtheorem{trditev}[izrek]{Trditev}
+\newtheorem{posledica}[izrek]{Posledica}
+\newtheorem{aksiom}[izrek]{Aksiom}
+\newtheorem{definicija}[izrek]{Definicija}
+\theoremstyle{remark}
+\newtheorem*{opomba}{Opomba}
+
+\newcommand{\gv}[1]{\ensuremath{\text{\boldmath\(#1\)}}}	% for vectors of Greek letters
+
+\DeclareMathOperator*{\cone}{Cone}	% stozec
+\DeclareMathOperator*{\conv}{Conv}	% konveksna ovojnica
+\DeclareMathOperator*{\rank}{rank}	% rank preslikave
+\DeclareMathOperator*{\aff}{Aff}	% afina ovojnica
+\DeclareMathOperator*{\dom}{dom}	% domena
+\DeclareMathOperator*{\ext}{ext}	% zunanjost mnozice
+\DeclareMathOperator*{\Int}{int}	% notranjost mnozice
+\DeclareMathOperator*{\Lie}{Lie}	% Liejeva grupa
+\DeclareMathOperator*{\im}{Im}		% imaginarni del
+\DeclareMathOperator*{\re}{Re}		% realni del
+\DeclareMathOperator*{\tr}{sl}		% sled
+\DeclareMathOperator{\st}{deg}		% stopnja preslikave
+\DeclareMathOperator*{\ord}{ord}	% veckratnost
+\DeclareMathOperator{\lin}{Lin}		% linearna ovojnica
+\DeclareMathOperator{\Aut}{Aut}		% mnozica avtomofrizmov
+\DeclareMathOperator{\End}{End}		% mnozica endomorfizmov
+\DeclareMathOperator{\ad}{ad}		% preslikava ad
+\DeclareMathOperator{\Ad}{Ad}		% preslikava Ad
+
+\newcommand{\cl}[1]{\overline{#1}} % zaprtje
+
+\newcommand{\odp}[0]{\ ^{\mathrm{odp}}\!\!\subseteq}
+\newcommand{\zap}[0]{\ ^{\mathrm{zap}}\!\!\subseteq}
+\newcommand{\komp}[0]{\ ^{\mathrm{komp}}\!\!\subseteq}
+\newcommand{\rn}[0]{\mathds{R}^n}		% evklidski prostor dimenzije n
+\renewcommand{\rm}[0]{\mathds{R}^m}		% evklidski prostor dimenzije m
+\renewcommand{\sp}[2]{\langle #1, #2 \rangle}	% skalarni produkt
+\newcommand{\fp}[1]{\mathds{#1}\mathrm{P}}	% projektivni prostor
+\newcommand{\cpn}[0]{\fp{C}^n}			% kompleksni evklidski prostor dimenzije n
+
+\newcommand{\grad}[1]{\gv{\nabla}#1}				% gradient
+\let\underdot=\d % rename builtin command \d{} to \underdot{}
+\renewcommand{\d}[2]{\frac{d #1}{d #2}}				% odvod
+\newcommand{\dd}[2]{\frac{d^2 #1}{d #2^2}}			% dvojni odvod
+\newcommand{\pd}[2]{\frac{\partial #1}{\partial #2}}		% parcialni odvod
+\newcommand{\pdd}[2]{\frac{\partial^2 #1}{\partial #2^2}}	% dvojni parcialni odvod
