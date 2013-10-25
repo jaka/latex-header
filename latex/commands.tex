@@ -9,13 +9,16 @@
 
 \newcommand{\gv}[1]{\ensuremath{\text{\boldmath\(#1\)}}}	% for vectors of Greek letters
 
-\DeclareMathOperator*{\cone}{Cone}	% stozec
+\DeclareMathOperator*{\cone}{Cone}	% stožec
 \DeclareMathOperator*{\conv}{Conv}	% konveksna ovojnica
+\DeclareMathOperator*{\diag}{diag}	% diagonalna matrika
+\DeclareMathOperator{\coker}{coker}
 \DeclareMathOperator*{\rank}{rank}	% rank preslikave
+\DeclareMathOperator*{\supp}{supp}	% nosilec preslikave
 \DeclareMathOperator*{\aff}{Aff}	% afina ovojnica
 \DeclareMathOperator*{\dom}{dom}	% domena
-\DeclareMathOperator*{\ext}{ext}	% zunanjost mnozice
-\DeclareMathOperator*{\Int}{int}	% notranjost mnozice
+\DeclareMathOperator*{\ext}{ext}	% zunanjost množice
+\DeclareMathOperator*{\Int}{int}	% notranjost množice
 \DeclareMathOperator*{\Lie}{Lie}	% Liejeva grupa
 \DeclareMathOperator*{\im}{Im}		% imaginarni del
 \DeclareMathOperator*{\re}{Re}		% realni del
@@ -23,8 +26,8 @@
 \DeclareMathOperator{\st}{deg}		% stopnja preslikave
 \DeclareMathOperator*{\ord}{ord}	% veckratnost
 \DeclareMathOperator{\lin}{Lin}		% linearna ovojnica
-\DeclareMathOperator{\Aut}{Aut}		% mnozica avtomofrizmov
-\DeclareMathOperator{\End}{End}		% mnozica endomorfizmov
+\DeclareMathOperator{\Aut}{Aut}		% množica avtomofrizmov
+\DeclareMathOperator{\End}{End}		% množica endomorfizmov
 \DeclareMathOperator{\ad}{ad}		% preslikava ad
 \DeclareMathOperator{\Ad}{Ad}		% preslikava Ad
 
@@ -41,7 +44,7 @@
 
 \newcommand{\grad}[1]{\gv{\nabla}#1}				% gradient
 \let\underdot=\d % rename builtin command \d{} to \underdot{}
-\renewcommand{\d}[2]{\frac{d #1}{d #2}}				% odvod
+\renewcommand{\d}[2]{\frac{\mathrm{d}#1}{\mathrm{d}#2}}		% odvod
 \newcommand{\dd}[2]{\frac{d^2 #1}{d #2^2}}			% dvojni odvod
 \newcommand{\pd}[2]{\frac{\partial #1}{\partial #2}}		% parcialni odvod
 \newcommand{\pdd}[2]{\frac{\partial^2 #1}{\partial #2^2}}	% dvojni parcialni odvod
